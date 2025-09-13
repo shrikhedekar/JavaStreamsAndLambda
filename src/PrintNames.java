@@ -26,6 +26,11 @@ public class PrintNames {
         // Method references to an instance method for a specific object
         names.forEach(System.out::println);
 
+        // Can also be done directly like below
+        names.sort((s1,s2)-> s2.length() - s1.length());
+        // Method references to an instance method for a specific object
+        names.forEach(System.out::println);
+
         // Method references to an instance method to be called for the first argument
         Function<String, String> transformer = String::toUpperCase;
         System.out.println(transformer.apply("Susan"));
