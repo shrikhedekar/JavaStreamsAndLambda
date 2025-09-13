@@ -1,3 +1,5 @@
+import java.util.function.Function;
+
 interface Shape {
     void draw();
 }
@@ -22,6 +24,10 @@ public class FunctionalInterfaceDemo {
 
         c2.draw();
 
+        // Using method reference to implement functional interface
+        Function<String , String> upperCase = String::toUpperCase;
+
+        System.out.println("Using method reference :"+upperCase.apply("this was passed as lowercase"));
     }
 
 }
